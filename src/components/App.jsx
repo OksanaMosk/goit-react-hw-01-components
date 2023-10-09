@@ -10,10 +10,10 @@ export const App = () => {
       //   color: '#010101'
       // }}
     >
-      {Profile}
-      {Statistics}
-      {FriendList}
-      {TransactionHistory}
+      {/* <Profile/>
+      <Statistics/>
+      <FriendList/>
+      <TransactionHistory/> */}
     </div>
   );
 };
