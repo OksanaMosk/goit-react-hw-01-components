@@ -1,25 +1,20 @@
-export default FriendList;
-function FriendList(props) {
-    <table class="transaction-history">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
+import FriendListItem from 'components/FriendListItem/FriendListItem';
 
-  <tbody>
-    <tr>
-      <td>Invoice</td>
-      <td>125</td>
-      <td>USD</td>
-    </tr>
-    <tr>
-      <td>Withdrawal</td>
-      <td>85</td>
-      <td>USD</td>
-    </tr>
-  </tbody>
-</table>
+const FriendList = ({ items }) => {
+    return (
+        <ul className="friend-list">
+            {items.map(item => (
+            <FriendListItem
+          key={item.id}
+          avatar={item.avatar}
+          name={item.name}
+            isOnline={item.isOnline}
+          />
+            ))
+            }
+        </ul>
+    )
+
 }
+
+export default FriendList;

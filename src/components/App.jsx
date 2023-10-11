@@ -1,9 +1,12 @@
 import  Profile  from './Profile/Profile'
 import  Statistics  from './Statistics/Statistics'
-import  FriendList  from './FriendList/FriendList'
+import FriendListItem from './FriendListItem/FriendListItem'
+import FriendList from './FriendList/FriendList'
 import  TransactionHistory  from './TransactionHistory/TransactionHistory'
 import user from '../components/user.json'
 import data from '../components/data.json'
+import friends from '../components/friends.json'
+import transactions from '../components/transactions.json'
 
 export const App = () => {
   return (
@@ -29,13 +32,17 @@ export const App = () => {
     likes={user.stats.likes}
     />
       
-      <Statistics
-       items={data}
+      <Statistics items={data}
         key={data.id}
         label={data.label}
         percentage={data.percentage}
       />
-      <FriendList/>
+
+      <FriendList items={friends}
+      />
+      
+    
+
       <TransactionHistory/>
     </div>
   );

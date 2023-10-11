@@ -1,11 +1,28 @@
-export default TransactionHistory;
 
-function TransactionHistory(props) {
-    <ul className="friend-list">
-<li className="item">
-  <span className="status"></span>
-  <img className="avatar" src="" alt="User avatar" width="48" />
-  <p className="name"></p>
-</li>
-</ul>
-}
+const TransactionHistory = (items) => {
+  return (
+   <table class="transaction-history">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Currency</th>
+    </tr>
+  </thead>
+     
+        {items.map(item => (
+      <tbody key={item.id}>
+          <tr >
+            <td>{item.type}</td>
+            <td>{item.amount}</td>
+            <td>{item.currency}</td>
+            
+          </tr> 
+        </tbody>))
+      }
+      
+</table>
+  )
+ } 
+{/* <tr><td>${obj.name}</td><td>${obj.language}</td></tr>  */}
+ export default TransactionHistory;
