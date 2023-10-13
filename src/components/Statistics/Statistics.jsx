@@ -12,9 +12,9 @@ const generateColor = () => {
 const Statistics = ({stats,title = false}) => {
     return (
       <section className={css.statistics}>
-        {title && <h2 className={css.title}>title</h2>}    
+        {title && <h2 className={css.title}>{title}</h2>}    
  
-        <ul className={css.statList}>
+        <ul className={css.statList} key={stats.id}>
           {stats.map(item => (
             <li style={{backgroundColor: generateColor()}} className={css.item} key={item.id}>{item.backgroundColor}
               <span className={css.label}>{item.label}</span>

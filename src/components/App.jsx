@@ -21,23 +21,11 @@ export const App = () => {
     likes={user.stats.likes}
     />
       
-      <Statistics stats={data}
-        key={data.id}
-        label={data.label}
-        percentage={data.percentage}
-      />
+      <Statistics stats={data}/>
 
-      <FriendList items={friends}
-      />
+      <FriendList items={friends}/>
       
-    
-
-      <TransactionHistory items={transactions} 
-        key={transactions.id}
-      type={transactions.type}
-      amount={transactions.amount}
-      currency={transactions.currency}
-      />
+      <TransactionHistory items={transactions}/>
 
     </div>
   );
