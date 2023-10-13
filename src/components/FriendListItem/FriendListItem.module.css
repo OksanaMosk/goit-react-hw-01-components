@@ -1,0 +1,41 @@
+.item {
+  background-color: rgb(197, 219, 233);
+  box-shadow: 1px 1px 1px 1px #1a5f97;
+  border: 1px solid #1a5f97;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  align-items: center;
+  cursor: pointer;
+}
+.item:hover,
+.item:focus {
+  background-color: cadetblue;
+  box-shadow: 3px 3px 3px 3px #1a5f97;
+}
+
+.status {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #1a5f97;
+  border-radius: 50%;
+}
+.true {
+  background-color: rgb(166, 189, 133);
+}
+
+.false {
+  background-color: rgb(231, 169, 169);
+}
+
+.avatar:hover,
+.avatar:focus {
+  width: 50px;
+}
+
+.name {
+  font-size: 16px;
+  color: #155485;
+  text-transform: uppercase;
+  font-weight: 500;
+}
